@@ -35,7 +35,6 @@ export default function App() {
     }
   }
 
-
   // 密碼格式判斷 網路上copy的~~
   const checkPasswordValidity = (value) => {
     const isNonWhiteSpace = /^\S*$/;
@@ -110,7 +109,7 @@ export default function App() {
             {/* ======== 介紹區塊 ======== */}
             <Image
               source={require('./src/img/bank2.png')}
-              style={{ width: 90, height: 90, marginBottom: 20 }}
+              style={{ width: 70, height: 70, marginBottom: 20 }}
             />
             <Text style={styles.info_text}>歡迎使用阿強銀行{'\n'}登入會員後繼續使用服務</Text>
             {/* ======== 介紹區塊 ======== */}
@@ -123,7 +122,7 @@ export default function App() {
               value={userId}
               onChangeText={(text) => setUserId(text)}
             ></TextInput>
-            <Text style={styles.userIdState}>{userIdState}</Text>
+            <Text style={styles.userIdState_text}>{userIdState}</Text>
             {/* 密碼 */}
             <View>
               <TextInput
