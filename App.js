@@ -128,14 +128,14 @@ export default function App() {
               <TextInput
                 style={[styles.input, { marginBottom: 6 }]}
                 placeholder='密碼'
-                onFocus={() => { pwdIng() }}
+                onFocus={() => pwdIng()}
                 secureTextEntry={seePwd}
                 value={passWord}
                 onChangeText={(text) => setPassWord(text)}
                 clearTextOnFocus={true}
               >
               </TextInput>
-              <TouchableOpacity style={styles.pwd_icon} onPress={() => { setSeePwd(!seePwd) }}>
+              <TouchableOpacity style={styles.pwd_icon} onPress={() => setSeePwd(!seePwd)}>
                 <Image source={seePwd ?
                   require('./src/img/view.png') :
                   require('./src/img/hide.png')}
@@ -144,15 +144,15 @@ export default function App() {
             </View>
 
             {count > 3 ?
-              <Text style={styles.forget_pwd} onPress={() => { getPwd() }}>忘記密碼?</Text> :
+              <Text style={styles.forget_pwd} onPress={() => getPwd()}>忘記密碼?</Text> :
               <Text style={styles.forget_pwd}></Text>}
             {/* ======== 帳號密碼輸入區 ======== */}
 
             {/* ======== 登入區塊 ======== */}
-            <TouchableHighlight style={styles.btn} onPress={() => { loginCheck() }}>
+            <TouchableHighlight style={styles.btn} onPress={() => loginCheck()}>
               <Text style={{ color: '#4AAA72', fontSize: 20, fontWeight: 'bold', letterSpacing: 2 }}>LOGIN</Text>
             </TouchableHighlight>
-            <TouchableOpacity onPress={() => { bioLogin() }}>
+            <TouchableOpacity onPress={() => bioLogin()}>
               <Image
                 source={require('./src/img/finger-print2.png')}
                 style={{ width: 50, height: 50, marginTop: 30 }}
